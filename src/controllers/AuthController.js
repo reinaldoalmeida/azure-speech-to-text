@@ -17,7 +17,10 @@ module.exports = {
                 response.log(response.data);
             })
             .catch((error) => {
-                console.log("ERROR: ", error);
+                console.log(
+                    `ERROR [${error.response.status}]`,
+                    error.response.statusText
+                );
                 return res
                     .status(400)
                     .send({ error: "Azure Code Authentication Failed" });
