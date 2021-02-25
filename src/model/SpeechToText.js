@@ -3,11 +3,10 @@ const path = require("path");
 const process = require("process");
 const sdk = require("microsoft-cognitiveservices-speech-sdk");
 
-if (process.env.NODE_ENV !== "production") {
-    require("dotenv").config();
-}
-
 function fromFile() {
+    if (process.env.NODE_ENV !== "production") {
+        require("dotenv").config();
+    }
     const speechConfig = sdk.SpeechConfig.fromSubscription(
         `${process.env.SUBSCRIPTION_KEY}`,
         `${process.env.REGION}`

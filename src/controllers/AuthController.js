@@ -3,6 +3,9 @@ const process = require("process");
 
 module.exports = {
     async show(req, res) {
+        if (process.env.NODE_ENV !== "production") {
+            require("dotenv").config();
+        }
         axios
             .post(`${process.env.ENDPOINT}`, "", {
                 headers: {
