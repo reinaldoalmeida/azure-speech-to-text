@@ -9,5 +9,5 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(routes);
 
 app.listen(3000, () => {
-    console.log("===== Azure Speech to Text =====");
+    console.log("==== Azure Speech to Text ====");
 });
