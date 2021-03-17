@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "prestart": "npm i",
-    "dev": "nodemon --inspect src/stt.js"
+    "dev": "nodemon --inspect src/index.js"
   },
   "author": "Reinaldo Almeida",
   "license": "ISC",
